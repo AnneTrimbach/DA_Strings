@@ -13,24 +13,26 @@ goal_0 = 32
 goal_1 = 54
 
 #3. wie scoorde wanneer
-scorers = f'{player_0} {str(goal_0)}, {player_1} {str(goal_1)}'
+scorers =player_0 + " " + str(goal_0) + ", " + player_1 + " " + str(goal_1)
+print(scorers)
 
 #4. gebruik f-strings
-report = f'{player_0} scored in the {goal_0}nd minute' '\n' f'{player_1} scored in the {goal_1}th minute'
+report = f'{player_0} scored in the {goal_0}nd minute\n{player_1} scored in the {goal_1}th minute'
+print(report)
 
 #part2
 #1. kies een speler
 player = 'Erwin Koeman'
 #2. voormaan
-first_name = player[0:player.find(" ")]
+first_name = player[:player.find(" ")]
 #3. aantal letters achternaam
 last_name_len = len(player[player.find(" ")+1:len(player)])
 #4. naam afgekort
 name_short = player[:1]+"."+player[player.find(" "):]
 #5. chant
-chant = ((first_name+"! ")*(len(first_name)-1))+((first_name+"!")*1)
+chant = ((first_name+"! ")*(len(first_name)-1))+((first_name+"!"))
 #6. good chant
-good_chant = bool(chant[-1] != " ")
+good_chant = chant[-1] != " "
 
 
 
